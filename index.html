@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+
+            <!-- GOOGLE-Fonts -->
+          <link href="https://https://fonts.googleapis.com/icon?family=Montserrat|Ubuntu" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+           <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Shadows+Into+Light&family=Swanky+and+Moo+Moo&display=swap" rel="stylesheet">
+          <!-- CSS-style -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+          <link rel="stylesheet" href="style.css">
+          <link rel="icon" href="favicon.ico">
+
+          <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+           <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+           <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+           <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script> -->
+
+          <!-- FONT-Awwesome -->
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+
+
+
+          <!-- BOOTSTRAP-Script -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+             <script type="text/javascript">
+               google.charts.load('current', {'packages':['corechart']});
+               google.charts.setOnLoadCallback(drawChart);
+
+               function drawChart() {
+                 var data = google.visualization.arrayToDataTable([
+                   ['Month', 'Sales'],
+                   // [900],
+                   ['Jan',  210 ],
+                   ['Feb',  140],
+                   ['Mar',  180],
+                   ['Apr',  210],
+                   ['May',  250],
+                   ['Jun',  230],
+                   ['Jul',  200],
+                   ['Aug',  180],
+                   ['Sept',  170],
+                   ['Oct',  180],
+                   ['Nov',  200],
+                   ['Dec',  289]
+                 ]);
+
+                 var options = {
+                   title: '',
+                   curveType: 'function',
+                   legend: { position: 'bottom' }
+                 };
+
+                 var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+                 chart.draw(data, options);
+               }
+             </script>
+
+             <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+             <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Total Income',     11],
+          ['No Income',      3.8]
+        ]);
+
+
+
+        var options = {
+          title: '',
+          pieHole: 0.7,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript">
+google.charts.load("current", {packages:["corechart"]});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+ ['Task', 'Hours per Day'],
+ ['Total Income',     5],
+ ['No Income',      5]
+]);
+
+var options = {
+ title: '',
+ pieHole: 0.7,
+};
+
+var chart = new google.visualization.PieChart(document.getElementById('donutchart1'));
+chart.draw(data, options);
+}
+</script>
+
+<script type="text/javascript">
+google.charts.load("current", {packages:["corechart"]});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+['Task', 'Hours per Day'],
+['Total Income',     5],
+['No Income',      5],
+// ['Commute',  2],
+// ['Watch TV', 2],
+// ['Sleep',    7]
+]);
+
+var options = {
+title: '',
+pieHole: 0.7,
+};
+
+var chart = new google.visualization.PieChart(document.getElementById('donutchart2'));
+chart.draw(data, options);
+}
+</script>
+
+  </head>
+  <body  style="">
+
+    <section style="width:100%;">
+      <div class="row">
+
+    <div class="d-flex" id="wrapper">
+
+      <!-- Sidebar -->
+      <div class=" border-right" id="sidebar-wrapper" style="width:25%;text-align:center;">
+        <div class="sidebar-heading">
+          <br>
+          <i class="fas fa-user-graduate"></i>
+          <h3>GyanUday </h3>
+          <p style="font-size:7px;">India's e-learning platform</p>
+        </div>
+        <div class="list-group list-group-flush">
+          <div class="" style="background-color: #6915cf;">
+          <a href="#" class="list-group-item list-group-item-action ">Dashboard</a>
+          <a href="#" class="list-group-item list-group-item-action ">My Task</a>
+          <a href="#" class="list-group-item list-group-item-action ">My Project</a>
+          <a href="#" class="list-group-item list-group-item-action">My Wallet</a>
+          <a href="#" class="list-group-item list-group-item-action ">History Data</a>
+          <a href="#" class="list-group-item list-group-item-action " >Invoice</a>
+          <a href="#" class="list-group-item list-group-item-action ">Helps</a>
+          <a href="#" class=" "></a>
+          </div>
+        </div>
+      </div>
+      <!-- /#sidebar-wrapper -->
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper" style="width:100%;">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+          <!-- <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button> -->
+          <!-- <div class="nav search-row" id="top_menu"> -->
+            <!--  search form start -->
+            <!-- <ul class="nav top-menu">
+              <li>
+                <form class="navbar-form">
+                  <input class="form-control" placeholder="Search" type="text">
+                </form>
+              </li>
+            </ul> -->
+            <!--  search form end -->
+          <!-- </div> -->
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Category</button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div role="separator" class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+              </div>
+            </div>
+            <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Search" style="background-color:#eeeeee;">
+            <div class="input-group-append">
+   <button class="btn btn-outline-secondary" type="button" id="button-addon2" style="background-color: #6915cf;color:white;"><i class="fas fa-search"></i></button>
+ </div>
+          </div>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+              <!-- <li class="nav-item ">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li> -->
+
+              <!-- <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                              <i class="icon-envelope-l"></i>
+                              <span class="badge bg-important">5</span>
+                          </a> -->
+                          <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <!-- Dropdown -->
+                            <i class="far fa-envelope" ><sup class="badge badge-light" style="position:absolute;">3</sup></i>
+                            <!-- <span class="badge bg-important">5</span> -->
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="#">Action</a>
+                              <a class="dropdown-item" href="#">Another action</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                          </li>
+
+                          <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <!-- Dropdown -->
+                            <i class="fas fa-bell"><sup class="badge badge-light" style="position:absolute;">4</sup></i>
+                            <!-- <sup class="badge badge-light" style="position:absolute;">4</sup> -->
+                            <!-- <span class="badge bg-important">5</span> -->
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="#">Action</a>
+                              <a class="dropdown-item" href="#">Another action</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                          </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <!-- Dropdown -->
+                  <span class="profile-ava">
+                      <img alt="" src="lady.jpg" style="border-radius:100%;height:30px;width:30px;">
+                  </span>
+                  <span class="username">Jenifer Smith</span>
+
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="container-fluid " style="  background-color: #eeeeee;">
+
+<br>
+          <!-- <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled </p> -->
+      <div class="row ">
+
+        <div class="col-lg-8" style="width: 800px; height: 400px;background-color:white;margin:10px;">
+          <h6>Statistics</h6>
+          <ul class="navbar-nav mr-auto " style="text-align:right;">
+            <span style="display:inline;">
+            <li class="nav-item dropdown" style="display:inline-block;">
+              <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <!-- Dropdown -->
+                <b>2020</b>
+              <i class="fas fa-angle-down" style=""></i>
+              <!-- <span class="badge bg-important">5</span> -->
+              </a>
+              <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown" style="display:inline-block;margin-left:30px;">
+              <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <!-- Dropdown -->
+                <b>Month</b>
+              <i class="fas fa-angle-down" style=""></i>
+              <!-- <span class="badge bg-important">5</span> -->
+              </a>
+              <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            </span>
+          </ul>
+
+          <div id="curve_chart" style="height:300px;width:550px;"></div>
+        </div>
+
+        <div class="col-lg-5" style="width: 300px; height: 400px;background-color:white;margin-top:10px;margin-bottom:10px;margin-left:15px;margin-right:35px;;">
+          <h6>Earning in Month</h6>
+        <div id="donutchart" style=""></div>
+
+        <h6>75%</h6>
+        <hr>
+        <p style="padding:0;text-align:left;">
+          Deposit:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <b>$20 541 845 674</b>
+
+        </p>
+        <p style="padding:0;text-align:left;">
+
+          Deposit: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <b>$541 845 674</b>
+
+        </p>
+        <p style="padding:0;text-align:left;">
+
+          Deposit: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <b>$841 845 674</b>
+        </p>
+
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-lg-3" style="background-color:white;margin:10px;">
+          <h6>Monthly Sale</h6>
+<div id="donutchart1" style=""></div>
+<form>
+  <div class="form-group">
+  <label for="formControlRange">50%</label>
+    <input type="range" class="form-control-range" id="formControlRange">
+  </div>
+</form>
+<h4>20 541</h4>
+<p>Today Income</p>
+        </div>
+
+        <div class="col-lg-3" style="background-color:white;margin:10px;">
+          <h6>Yearly Sale</h6>
+<div id="donutchart2" style=""></div>
+<form>
+  <div class="form-group">
+    <label for="formControlRange">50%</label>
+    <input type="range" class="form-control-range" id="formControlRange">
+  </div>
+</form>
+<h4>20 541</h4>
+<p>Today Income</p>
+        </div>
+
+        <div class="col-lg-6" style="background-color:white;margin:10px;">
+          <h6 style="">Calender</h6>
+          <br>
+          <div class="container">
+        <div class="row" style="">
+          <div class="span12">
+                <table class="table-condensed " style="border:0;">
+                      <thead>
+                          <tr>
+                            <th colspan="7" >
+                              <a class="btn">
+                                <!-- <i class="icon-chevron-left"></i> -->
+  <i class="fas fa-angle-left" style="background-color:orange;color:white;padding:6px 18px;border-radius:40%;"></i>                            </a>
+                              <a class="btn"><b>04 October, 2020</b></a>
+                              <a class="btn">
+                                <!-- <i class="icon-chevron-right"></i> -->
+<i class="fas fa-angle-right" style="background-color:grey;color:white;padding:6px 18px;border-radius:40%;"></i>                              </a>
+                            </th>
+                          </tr>
+                          <tr>
+                              <th style="box-sizing: border-box;padding:6px 10px;border-radius:30%;">Mon</th>
+                              <th style="box-sizing: border-box;padding:6px 10px;border-radius:30%;">Tue</th>
+                              <th style="box-sizing: border-box;padding:6px 10px;border-radius:30%;">Wed</th>
+                              <th style="box-sizing: border-box;padding:6px 10px;border-radius:30%;">Thu</th>
+                              <th style="box-sizing: border-box;padding:6px 10px;border-radius:30%;">Fri</th>
+                              <th style="box-sizing: border-box;padding:6px 10px;border-radius:30%;">Sat</th>
+                              <th style="box-sizing: border-box;padding:6px 10px;border-radius:30%;">Sun</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td class="muted">29</td>
+                              <td class="muted">30</td>
+                              <td class="muted">31</td>
+                              <td>1</td>
+                              <td>2</td>
+                              <td>3</td>
+                              <td style="background-color:lightgreen;color:white;border-radius:50%;">4</td>
+                          </tr>
+                          <tr>
+                              <td>5</td>
+                              <td>6</td>
+                              <td>7</td>
+                              <td>8</td>
+                              <td>9</td>
+                              <td>10</td>
+                              <td>11</td>
+                          </tr>
+                          <tr>
+                              <td>12</td>
+                              <td>13</td>
+                              <td>14</td>
+                              <td>15</td>
+                              <td style="background-color:pink;color:white;border-radius:50%;">16</td>
+                              <td>17</td>
+                              <td>18</td>
+                          </tr>
+                          <tr>
+                              <td>19</td>
+                              <td>20</td>
+                              <td>21</td>
+                              <td>22</td>
+                              <td>23</td>
+                              <td>24</td>
+                              <td>25</td>
+                          </tr>
+                          <tr>
+                              <td>26</td>
+                              <td>27</td>
+                              <td>28</td>
+                              <td>29</td>
+                              <td class="muted">1</td>
+                              <td class="muted">2</td>
+                              <td class="muted">3</td>
+                          </tr>
+                      </tbody>
+                  </table>
+          </div>
+        </div>
+      </div>
+      <br>
+        </div>
+
+      </div>
+<br><br>
+        </div>
+      </div>
+      <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+  </div>
+</section>
+
+  </body>
+</html>
